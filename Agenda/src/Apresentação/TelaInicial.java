@@ -59,6 +59,11 @@ public class TelaInicial extends javax.swing.JFrame {
         btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Apresentacao/Imagens/1489810925_magnifying-glass.png"))); // NOI18N
 
         btnNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Apresentacao/Imagens/1489812796_add.png"))); // NOI18N
+        btnNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);
@@ -172,6 +177,11 @@ public class TelaInicial extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
+        TelaNovoContato abrirTelaNovoContato = new TelaNovoContato();
+        abrirTelaNovoContato.setVisible(true);
+    }//GEN-LAST:event_btnNovoActionPerformed
 
     /**
      * @param args the command line arguments

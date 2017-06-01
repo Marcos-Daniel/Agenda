@@ -49,10 +49,20 @@ public class TelaNovoContato extends javax.swing.JFrame {
         jLabel3.setText("E-mail:");
 
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Apresentacao/Imagens/1489812732_common-logout-signout-exit-glyph.png"))); // NOI18N
+        btnSair.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSairActionPerformed(evt);
+            }
+        });
 
         btnCadastrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Apresentacao/Imagens/1489812161_save.png"))); // NOI18N
 
         btnLimparCampos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Apresentacao/Imagens/1489812127_Broom_stick.png"))); // NOI18N
+        btnLimparCampos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparCamposActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -123,6 +133,14 @@ public class TelaNovoContato extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnLimparCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparCamposActionPerformed
+        this.limparCampos();
+    }//GEN-LAST:event_btnLimparCamposActionPerformed
+
+    private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnSairActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -171,4 +189,27 @@ public class TelaNovoContato extends javax.swing.JFrame {
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtTelefone;
     // End of variables declaration//GEN-END:variables
+
+    private void limparCampos(){
+        txtEmail.setText("");
+        txtNome.setText("");
+        txtTelefone.setText("");
+    }    
+
+    private boolean verificaCampos(){
+        if(!txtEmail.getText().equals(""))
+            return false;
+        if(!txtNome.getText().equals(""))
+            return false;
+        if(!txtTelefone.getText().equals(""))
+            return false;
+        return true;
+    }
+
+    private void recuperaCampos(){
+        String email= txtEmail.getText().trim();
+        String Nome= txtNome.getText().trim();
+        String telefone= txtTelefone.getText().trim();
+    }
+
 }

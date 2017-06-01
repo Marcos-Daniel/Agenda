@@ -139,6 +139,9 @@
               <Image iconType="3" name="/Apresentacao/Imagens/1489812732_common-logout-signout-exit-glyph.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSairActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCadastrar">
           <Properties>
@@ -153,6 +156,9 @@
               <Image iconType="3" name="/Apresentacao/Imagens/1489812127_Broom_stick.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimparCamposActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
