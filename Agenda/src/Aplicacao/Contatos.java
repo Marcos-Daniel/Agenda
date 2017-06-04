@@ -21,6 +21,7 @@ public class Contatos implements Entidade{
     }
 
     public Contatos(String nome, String email, String telefone) {
+        this.id=0;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
